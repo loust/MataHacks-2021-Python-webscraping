@@ -178,6 +178,7 @@ for item in allitems:
         'Paragraph' : object1,
         'url' : object2
     }
+```
 
 https://docs.scrapy.org/en/latest/intro/tutorial.html
 https://docs.scrapy.org/en/latest/topics/practices.html
