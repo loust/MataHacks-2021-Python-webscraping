@@ -6,7 +6,7 @@ with open('linuxquestions.html', 'r') as f:
 
 reader = bs(data, features="html.parser")
 
-print(reader.title) # Get the title
+print(reader.title.text) # Get the title
 
 print(reader.find('div', attrs={"id": "post_message"})) # This will not work, since the post IDs are as follows: post_message_######
 
