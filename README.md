@@ -11,6 +11,7 @@ This will go over the following with Python3.
     * Parse a paragraph from a Wikipedia article
     * Parse a table from a website or a Wikipedia article
     * Parse forum posts from a forum
+    * Implement one of the tutorials from the links below and modify it.
     * Head to https://webscraping.us/blog/ and try to see how far you can get using Scrapy
 
 
@@ -142,7 +143,6 @@ The IDENTIFIERs are keywords that you can use to find specific rows (background 
 The href is what you want to look for, so, if a text has a link, it has an "href". The IDENTIFIER for this, is if a URL has some specific keywords, you can get specific types of URLs.
 The ::attr(href) indicates that you want to get the links, similar to ::text
 
-
 To look for words inside of a paragraph (and grab it) we can use :contains("WORD")
 ```python
 response.css(r"p:contains('INDICATOR')")
@@ -165,6 +165,19 @@ response.xpath("//script[contains(.,INDICATOR')]/text()").extract_first()
 ```
 You can now use a library called `js2xml` to extract the data as XML. It will be labeled under `<program>`
 
+
+If there are multiple items provided, for example a list, or a div that contains several datasets, you can loop through it after getting the whole contents/divs
+```python
+allitems = response.css('div.itsclassname'))
+
+for item in allitems:
+    object1 = item.css('p::text').extract()
+    object2 = item.css('a::href').extract()
+
+    yield {
+        'Paragraph' : object1,
+        'url' : object2
+    }
 
 https://docs.scrapy.org/en/latest/intro/tutorial.html
 https://docs.scrapy.org/en/latest/topics/practices.html
