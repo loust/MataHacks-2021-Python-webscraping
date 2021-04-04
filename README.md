@@ -159,9 +159,17 @@ def other_function(self, response):
 ```
 This way, you can parse several things, instead of just one. Though, you can yield your data at this stage, if you are planning on just going one level deep.
 
+You can also look inside javascript to dig for data:
+```python
+response.xpath("//script[contains(.,INDICATOR')]/text()").extract_first()
+```
+You can now use a library called `js2xml` to extract the data as XML. It will be labeled under `<program>`
+
 
 https://docs.scrapy.org/en/latest/intro/tutorial.html
 https://docs.scrapy.org/en/latest/topics/practices.html
 https://docs.scrapy.org/en/latest/topics/request-response.html
 
 Using the links above, you can read the documentation to help you with the exercises.
+
+To help with examples to solve the above exercises, please follow the tutorials here: https://github.com/topics/scrapy-tutorial
