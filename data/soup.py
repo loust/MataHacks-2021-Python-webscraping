@@ -8,7 +8,7 @@ reader = bs(data, features="html.parser")
 
 print(reader.title.text) # Get the title
 
-print(reader.find('div', attrs={"id": "post_message"})) # This will not work, since the post IDs are as follows: post_message_######
+print(reader.find('div', attrs={"id": "post_message"}, text=True)) # This will not work, since the post IDs are as follows: post_message_######
 
 # So, we do it with regex:
 
