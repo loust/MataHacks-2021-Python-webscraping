@@ -1,11 +1,11 @@
 This will go over the following with Python3.
 
-0. [What is webscraping and how can we do it?](#What is webscraping and how can we do it?)
-    * [Some problems and solutions](#Some problems and solutions)
-1. [Downloading web pages](#Downloading web pages)
-    * [Modifying the User-Agent](#Modifying the User-Agent)
-2. [Parsing data with Beautiful Soup](#Parsing data with Beautiful Soup)
-3. [Parsing data with Scrapy](#Parsing data with Scrapy)
+0. [What is webscraping and how can we do it?](#What-is-webscraping-and-how-can-we-do-it)
+    * [Some problems and solutions](#Some-problems-and-solutions)
+1. [Downloading web pages](#Downloading-web-pages)
+    * [Modifying the User-Agent](#Modifying-the-User-Agent)
+2. [Parsing data with Beautiful Soup](#Parsing-data-with-Beautiful-Soup)
+3. [Parsing data with Scrapy](#Parsing-data-with-Scrapy)
 4. Exercises:
     * Parse a simple title from any website
     * Parse a paragraph from a Wikipedia article
