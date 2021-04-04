@@ -119,14 +119,14 @@ scrapy shell https://en.wikipedia.org/wiki/Instant_messaging
 
 Some syntax you can use:
 ### To find divs with classes/IDs
-```
+```python
 response.xpath('//div[@id="place-id-here"]/p/text()').extract()
 ```
 The above will extract all "text" from the paragraph tag inside of the div with the ID "place-id-here"
 
 Alternatively, you can use the following:
 
-```
+```python
 response.css(r"p::text").extract()
 ```
 
@@ -144,7 +144,7 @@ The ::attr(href) indicates that you want to get the links, similar to ::text
 
 
 To look for words inside of a paragraph (and grab it) we can use :contains("WORD")
-```
+```python
 response.css(r"p:contains('INDICATOR')")
 ```
 
